@@ -78,7 +78,7 @@ services:
     networks:
       - ctyd_bridge
     ports:
-      - '27017:27017'
+      - '27018:27017'
     healthcheck:
       interval: 30s
       timeout: 10s

@@ -54,7 +54,7 @@ export class AiService implements OnModuleInit {
       throw new Error(`Unsupported LLM provider: ${llmProvider}`);
     }
 
-    this.toolkit = new SqlToolkit(postgresDb);
+    this.toolkit = new SqlToolkit(postgresDb, this.model);
 
     this.executor = createSqlAgent(this.model, this.toolkit, {
       topK: 20,
